@@ -11,3 +11,9 @@
 .country-setup{max-width:360px;flex:1}
 .country-setup [id^="players"]{display:grid;grid-template-columns:repeat(2,minmax(110px,1fr));gap:5px}
 @keyframes failedAttack{0%{transform:translateX(-45vw) scale(.5);opacity:0}55%{transform:translateX(3vw) scale(1.2)}75%{transform:translateX(-2vw) rotate(-8deg)}100%{transform:translateX(0) scale(1)}}
+.lottery-screen{min-height:100vh;display:grid;place-content:center;text-align:center;padding:25px;background:radial-gradient(circle,#274b5a,#07151e 62%,#020609);overflow:hidden}
+.lottery-screen:before{content:'';position:fixed;inset:-40%;background:conic-gradient(from 0deg,transparent,#e9bd6226,transparent,#52d2da22,transparent);animation:lotterySweep 3s linear infinite}
+.lottery-screen>*{position:relative;z-index:1}.lottery-crown{font-size:7rem;color:#ffe18c;filter:drop-shadow(0 0 24px #e9bd62)}
+.lottery-screen h1{min-width:min(760px,90vw);margin:.15em 0;font-family:'Aref Ruqaa Ink';font-size:clamp(3.5rem,10vw,8rem);text-shadow:0 8px 30px #000;transition:.1s}
+.lottery-screen p{font-size:clamp(1.1rem,2.4vw,1.8rem)}.lottery-screen button{margin:auto}
+@keyframes lotterySweep{to{transform:rotate(360deg)}}
